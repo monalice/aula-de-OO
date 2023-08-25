@@ -23,7 +23,7 @@ public class Moedas {
         valor %= 10;
         
         m5 = valor/5;
-        m1 = valor/5;
+        m1 = valor%5;
         
         System.out.println("São necessárias: ");
         System.out.println(m100 + " moedas de 1 real");
