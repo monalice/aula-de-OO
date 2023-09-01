@@ -1,4 +1,4 @@
-package aula.src.main.java.com.example;
+package com.example;
 
 import java.util.Scanner;
 
@@ -8,14 +8,14 @@ public class Main {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Digite o seu telefone: ");
         String phone = teclado.nextLine();
-        boolean matcherPhone = phone.matcher("^\([0-9]{2}\)\s*[0-9]{4,5}-[0-9]{4}$");
+        boolean matcherPhone = phone.matches("^\\([0-9]{2}\\)\\s*[0-9]{4,5}-[0-9]{4}$");
         
-        if (matchFoundCellphone){
-            System.out.println("celular: " + phone);
-        } else if (matchFoundPhone){
-            System.out.println("telefone: " + phone);
+        if (matcherPhone){
+            System.out.println("funcionou: " + phone.substring(0, 4));
         } else {
             System.out.println("Falhamos na missão");
-        }
+        };
+
+        teclado.close();
     }
 }
